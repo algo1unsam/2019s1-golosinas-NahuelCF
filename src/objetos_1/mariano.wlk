@@ -22,7 +22,15 @@ object mariano {
 	}
 	
 	method hayGolosinasSinTACC(){
-		return golosinas.all{golosina => golosina.libreGluten()}
+		return golosinas.any{golosina => golosina.libreGluten()}
+	}
+	
+	method preciosCuidados(){
+		return golosinas.all{golosina => ((golosina.precio()) <= 10)}
+	}
+	
+	method golosinasDeSabor(unSabor){
+		return golosinas.count{golosina => (golosina.gusto() === ?)} // terminar
 	}
 }
 

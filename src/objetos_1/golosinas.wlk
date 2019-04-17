@@ -73,6 +73,7 @@ object chocolatin {
 		pesoInicial = cuanto
 		pesoActual = cuanto
 	}
+	method peso() {return pesoActual}
 	method precio() {return 0.5*pesoInicial}
 	method libreGluten() { return false }
 	method gusto() { return "chocolate" }
